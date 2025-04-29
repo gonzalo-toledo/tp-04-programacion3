@@ -14,7 +14,7 @@ export const UnicornProvider = ({ children }) => {
     const [error, setError] = useState(null);
 
 
-    const API_URL = 'https://crudcrud.com/api/bc1c7a202ca34057bd5144b1e44aa8f2/unicorns';
+    const API_URL = 'https://crudcrud.com/api/cba40e8bf619447cbeca8ef0418a7635/unicorns';
 
 
 
@@ -34,6 +34,7 @@ export const UnicornProvider = ({ children }) => {
             setLoading(false);
         }   
     }
+    
     useEffect(() => {
         getUnicorns()
     }
@@ -65,7 +66,7 @@ export const UnicornProvider = ({ children }) => {
 
 
     // editar un unicornio
-    const updateUnicorn = async (values) => {
+    const editUnicorn = async (values) => {
         if(!editingUnicorn) return; // Si no hay un unicornio en edición, no hacemos nada
         try {
             setLoading(true);
@@ -114,7 +115,7 @@ export const UnicornProvider = ({ children }) => {
 
     return (
         <UnicornContext.Provider 
-            value={{unicorns, getUnicorns, createUnicorn, loading, setLoading, updateUnicorn, error, setError, editingUnicorn, setEditingUnicorn, deleteUnicorn}}>
+            value={{unicorns, getUnicorns, createUnicorn, loading, setLoading, editUnicorn, error, setError, editingUnicorn, setEditingUnicorn, deleteUnicorn}}>
             {children}
         </UnicornContext.Provider>
     );
