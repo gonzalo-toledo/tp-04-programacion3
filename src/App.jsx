@@ -5,7 +5,7 @@ import { UnicornProvider } from './context/UnicornContext';
 import ProductsModule from './products';
 import UnicornsModule from './unicorns';
 import MenuBar from './components/MenuBar';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import IndexModule from './home';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <UnicornProvider>
           <UnicornsModule />
         </UnicornProvider>
-        {/* <Footer /> */}
+        <Footer />
       </Fragment>
     </BrowserRouter>
   );
