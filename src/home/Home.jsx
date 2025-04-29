@@ -1,4 +1,4 @@
-import unicornImage from '../assets/pngwing.com.png'; 
+import unicornImage from '../assets/unicorn.png'; 
 const Home = () => {
     return (
         <div className="home-background">
